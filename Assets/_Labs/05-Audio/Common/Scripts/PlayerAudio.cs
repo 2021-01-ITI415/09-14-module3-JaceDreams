@@ -6,18 +6,21 @@ using UnityEngine.Audio;
 public class PlayerAudio : MonoBehaviour
 {
     public AudioClip splashSound;
-    public AudioSource audioSource;
-    public AudioMixerSnapshot idleSnapshot,
-                                auxInSnapshot,
-                                ambIdleSnapshot,
-                                ambInSnapshot;
+
+    public AudioSource audioS;
+
+    public AudioMixerSnapshot idleSnapshot;
+    public AudioMixerSnapshot auxInSnapshot;
+    public AudioMixerSnapshot ambIdleSnapshot;
+    public AudioMixerSnapshot ambInSnapshot;
+
     public LayerMask enemyMask;
 
     bool enemyNear;
     private void Update()
     {
         RaycastHit[] hits = Physics.SphereCastAll(transform.position, 5f, transform.forward, 0f, enemyMask);
-        
+
         if (hits.Length > 0)
         {
             enemyNear = true;
@@ -52,7 +55,6 @@ public class PlayerAudio : MonoBehaviour
                 {
                     idleSnapshot.TransitionTo(0.5f);
                     AudioManager.manager.currentAudioMixerSnapshot = idleSnapshot;
-
                     AudioManager.manager.auxIn = false;
                 }
                 else
@@ -61,7 +63,6 @@ public class PlayerAudio : MonoBehaviour
                     {
                         idleSnapshot.TransitionTo(0.5f);
                         AudioManager.manager.currentAudioMixerSnapshot = idleSnapshot;
-
                         AudioManager.manager.auxIn = false;
                     }
                 }
@@ -73,14 +74,12 @@ public class PlayerAudio : MonoBehaviour
     {
         if (other.CompareTag("Water"))
         {
-            audioSource.PlayOneShot(splashSound);
+            audioS.PlayOneShot(splashSound);
         }
-
         if (other.CompareTag("EnemyZone"))
         {
             auxInSnapshot.TransitionTo(0.5f);
         }
-
         if (other.CompareTag("Ambience"))
         {
             ambInSnapshot.TransitionTo(0.5f);
@@ -91,14 +90,12 @@ public class PlayerAudio : MonoBehaviour
     {
         if (other.CompareTag("Water"))
         {
-            audioSource.PlayOneShot(splashSound);
+            audioS.PlayOneShot(splashSound);
         }
-
         if (other.CompareTag("EnemyZone"))
         {
             idleSnapshot.TransitionTo(0.5f);
         }
-
         if (other.CompareTag("Ambience"))
         {
             ambIdleSnapshot.TransitionTo(0.5f);
