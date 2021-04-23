@@ -479,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6476592888146022976, guid: 38a8131eac17f4f1a8e06f9b3f8643fd, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6476592888146022976, guid: 38a8131eac17f4f1a8e06f9b3f8643fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -761,8 +761,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 716059388}
-        m_TargetAssemblyTypeName: TestLoader, Assembly-CSharp
+      - m_Target: {fileID: 112368255}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadSceneByName
         m_Mode: 5
         m_Arguments:
@@ -770,7 +770,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: SampleScene2
+          m_StringArgument: Main
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &399937611
