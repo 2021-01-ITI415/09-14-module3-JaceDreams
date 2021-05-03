@@ -11,6 +11,8 @@ TagManager:
   - Ambience
   - WoodFloor
   - GrassFloor
+  - Water Volume
+  - PickUp
   layers:
   - Default
   - TransparentFX
