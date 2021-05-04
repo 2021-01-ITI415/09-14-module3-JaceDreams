@@ -9,7 +9,7 @@ public class Rings : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         collectSound.Play();
-        ScoringSystem.theScore += 100;
+        ScoringSystem.theScore += 10;
         ScoringSystem.theRing += 1;
         Destroy(gameObject);
     }
