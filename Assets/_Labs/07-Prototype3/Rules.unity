@@ -363,8 +363,8 @@ MonoBehaviour:
   m_text: "On your way home from work, the road you usually take is blocked off.
     Not knowing how else to get home, you decide to ask someone for directions. \n\nHowever,
     no one is around. Luckily, gold rings are scattered in the forest nearby, so
-    why not go gather them up!\n\nYet, for some reason, it feels like you're being
-    watched..."
+    why not go gather them up! Once you think you have enough, touch the stop sign!\n\nYet,
+    for some reason, it feels like you're being watched..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
