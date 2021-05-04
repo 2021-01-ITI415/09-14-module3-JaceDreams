@@ -13,6 +13,8 @@ TagManager:
   - GrassFloor
   - Water Volume
   - PickUp
+  - Fire
+  - End
   layers:
   - Default
   - TransparentFX

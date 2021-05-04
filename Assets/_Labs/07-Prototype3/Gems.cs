@@ -10,6 +10,7 @@ public class Gems : MonoBehaviour
     {
         collectSound.Play();
         ScoringSystem.theScore += 100;
+        ScoringSystem.theProGem += 1;
         Destroy(gameObject);
     }
 }

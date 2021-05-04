@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 public class FPSAudio : MonoBehaviour
 {
     public AudioClip splashSound;
+    public AudioClip fireSound;
 
     public AudioSource audioS;
 
@@ -84,6 +85,10 @@ public class FPSAudio : MonoBehaviour
         {
             audioS.PlayOneShot(splashSound);
         }
+        if (other.CompareTag("Fire"))
+        {
+            audioS.PlayOneShot(fireSound);
+        }
         if (other.CompareTag("EnemyZone"))
         {
             auxInSnapshot.TransitionTo(0.5f);
@@ -100,6 +105,7 @@ public class FPSAudio : MonoBehaviour
         {
             audioS.PlayOneShot(splashSound);
         }
+       
         if (other.CompareTag("EnemyZone"))
         {
             idleSnapshot.TransitionTo(0.5f);

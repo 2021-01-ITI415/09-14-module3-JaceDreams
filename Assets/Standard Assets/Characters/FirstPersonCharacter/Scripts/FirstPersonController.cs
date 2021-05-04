@@ -262,6 +262,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 other.gameObject.SetActive(false);
             }
+            if (other.gameObject.CompareTag("End"))
+            {
+                Application.LoadLevel("05-Audio");
+            }
         }
     }
 }
