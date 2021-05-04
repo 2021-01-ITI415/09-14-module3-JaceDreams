@@ -6,14 +6,13 @@ using UnityEngine.UI;
 public class ScoringSystem : MonoBehaviour
 {
     public GameObject scoreText;
-    public int theScore;
-    public AudioSource collectedSound;
+    public static int theScore;
+    public GameObject ringText;
+    public static int theRing;
 
-    void OnTriggerEnter(Collider other)
+    void Update()
     {
-        collectedSound.Play();
-        theScore += 1;
-        scoreText.GetComponent<Text>().text = "RINGS: " + theScore;
-        Destroy(gameObject);
+        scoreText.GetComponent<Text>().text = "SCORE: " + theScore;
+        ringText.GetComponent<Text>().text = "RING: " + theRing;
     }
 }
