@@ -16,6 +16,13 @@ public class ScoringSystem : MonoBehaviour
     public GameObject gemProText;
     public static int theProGem;
 
+    void Awake()
+    {
+        theScore = 0;
+        theRing = 0;
+        theProGem = 0;
+    }
+
     void Update()
     {
         scoreText.GetComponent<Text>().text = "SCORE: " + theScore;

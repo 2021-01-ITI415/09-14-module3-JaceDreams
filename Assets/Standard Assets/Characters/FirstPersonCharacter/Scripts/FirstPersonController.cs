@@ -264,7 +264,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if (other.gameObject.CompareTag("End"))
             {
-                Application.LoadLevel("05-Audio");
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
         }
     }
